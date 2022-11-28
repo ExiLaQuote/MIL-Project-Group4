@@ -1,0 +1,739 @@
+/* HTML SUPREME */
+*, *::before, *::after {
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "MilitechFill";
+  letter-spacing: 0.1vw;
+}
+
+*::-moz-selection {
+  background: #fbe78c;
+}
+
+*::selection {
+  background: #fbe78c;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+img, video {
+  display: block;
+}
+
+/* GLOBAL DESIGNS */
+@font-face {
+  font-family: "Lato";
+  src: url("MIL_Fonts/Lato.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("MIL_Fonts/Poppins.ttf");
+}
+@font-face {
+  font-family: "Geograph";
+  src: url("MIL_Fonts/Geograph.ttf");
+}
+@font-face {
+  font-family: "PublicSans";
+  src: url("MIL_Fonts/PublicSans.ttf");
+}
+@font-face {
+  font-family: "Cera";
+  src: url("MIL_Fonts/CeraRoundPro.ttf");
+}
+@font-face {
+  font-family: "Entanglement";
+  src: url("MIL_Fonts/Entanglement.ttf");
+}
+@font-face {
+  font-family: "MilitechStroke";
+  src: url("MIL_Fonts/MilitechStroke.ttf");
+}
+@font-face {
+  font-family: "MilitechFill";
+  src: url("MIL_Fonts/MilitechFill.ttf");
+}
+@font-face {
+  font-family: "UAVOSD";
+  src: url("MIL_Fonts/UAVOSD.ttf");
+}
+@font-face {
+  font-family: "DelightCoffee";
+  src: url("MIL_Fonts/DelightCoffee.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("MIL_Fonts/Raleway.ttf");
+}
+section, .roster-BG, .roster-col, .action-BG, .action-text-col, .action-btn-col, .inner-img-BG, .inner-text-BG, .inner-text-TXT, .inner-vid-BG, .inner-gall-BG, .inner-gall-box, .inner-gall-left, .inner-gall-right, .gall-words, .gall-articles, .inner-gall-left div, .inner-gall-right div, footer, .extraBG, #mainBG, .textBG, .textTXT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER & FOOTER */
+body {
+  background-color: #191919;
+  justify-content: space-around;
+}
+
+#header {
+  z-index: 1000;
+  position: fixed;
+  top: 0vh;
+  left: 0vw;
+  width: 100vw;
+  height: 10vh;
+  background-color: #f5ebdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1vh solid #013C7E;
+}
+
+#header p, #header p i, #header p a {
+  color: #013C7E;
+  text-align: center;
+  margin: 0vw 1vw 0vw 1vw;
+  font-size: 1.3vw;
+  letter-spacing: 0.14vw;
+  font-weight: 700;
+  transition: font-size 200ms ease;
+  cursor: pointer;
+}
+
+#header p:hover {
+  font-size: 2vw;
+}
+
+#header p a {
+  font-family: "UAVOSD";
+  color: #0477cf;
+  font-size: 1.2vw;
+}
+
+#header p a:hover {
+  font-size: 1.8vw;
+}
+
+#header p i {
+  font-family: "UAVOSD";
+  color: #0477cf;
+  font-size: 0.9vw;
+}
+
+#header p i:hover {
+  font-size: 1.1vw;
+}
+
+footer {
+  background-color: #DCCBB9;
+  width: 100vw;
+  height: 40vh;
+  bottom: 0vh;
+  position: absolute;
+}
+
+/* ABSTRACTIONS */
+.section {
+  z-index: 50;
+  position: absolute;
+  top: 5vh;
+  left: 0vw;
+  background-color: var(--gray);
+  width: 100vw;
+  height: 100vh;
+  transform: translate(120vw, 0vh);
+  flex-direction: column;
+  overflow-y: scroll;
+  text-align: center;
+  transition: transform 1000ms ease-in-out;
+}
+
+.inner-img-BG {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.inner-img-TXT {
+  position: absolute;
+  color: white;
+  font-size: 12vh;
+  letter-spacing: 1vw;
+  line-height: 11vw;
+  font-family: "UAVOSD";
+  font-weight: 900;
+}
+
+.inner-text-BG {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  flex-direction: column;
+  padding: 0vh 10vw 0vh 10vw;
+}
+.inner-text-BG hr {
+  height: 0.8vh;
+  width: 80vw;
+  border: none;
+}
+
+.inner-text-TXT {
+  display: flex;
+  flex-direction: row;
+  font-family: "UAVOSD";
+  font-size: 1.5vw;
+  text-align: justify;
+  align-items: flex-start;
+  line-height: 2.3vw;
+  gap: 4vw;
+  color: white;
+}
+
+.inner-vid-BG {
+  transform: translate(0vw, 200vh);
+  position: absolute;
+  flex-direction: row;
+  gap: 2vw;
+}
+.inner-vid-BG hr {
+  height: 0.4vh;
+  border: none;
+  border-radius: 100%;
+}
+.inner-vid-BG .inner-vid-TXT {
+  font-size: 1.3vw;
+  transform: translate(0vw, -1.3vw);
+  color: white;
+}
+.inner-vid-BG .inner-vid-TXT .inner-vid-TTL {
+  font-family: "MilitechStroke";
+}
+.inner-vid-BG .inner-vid-TXT p {
+  font-family: "MilitechFill";
+}
+
+.inner-text-TTL, .inner-vid-TTL {
+  font-weight: 900;
+  font-size: 3.7vw;
+  color: white;
+}
+
+.inner-vid-TTL {
+  font-size: 3.2vw;
+}
+
+hr {
+  height: 0.4vh;
+  border-radius: 100%;
+}
+
+.inner-gall-BG {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  padding: 16vh 8vw 16vh 8vw;
+  background-color: #191919;
+}
+
+.inner-gall-box {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.inner-gall-left {
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  padding: 1% 0% 1% 0%;
+}
+.inner-gall-left .gall-articles {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  flex-direction: column;
+}
+.inner-gall-left .gall-articles img {
+  width: 60%;
+  border-radius: 20%;
+  transition: width 200ms ease, border 200ms ease, border-radius 700ms ease;
+  margin-bottom: 5%;
+}
+.inner-gall-left .gall-articles h3 {
+  color: #191919;
+  font-size: 120%;
+  margin: 0vw;
+}
+.inner-gall-left .gall-articles p {
+  color: #191919;
+  font-size: 100%;
+  margin: 0vw;
+}
+
+.inner-gall-right {
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  background-color: #013C7E;
+}
+.inner-gall-right .gall-extras {
+  width: 100%;
+  height: 25%;
+  background-color: white;
+  padding: 1%;
+  padding-left: 2%;
+  justify-content: flex-start;
+  gap: 2%;
+}
+.inner-gall-right .gall-extras img {
+  width: 18%;
+  height: 100%;
+  border-radius: 12%;
+  transition: border 200ms ease, border-radius 200ms ease;
+}
+.inner-gall-right .gall-extras .gall-words {
+  width: 80%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 160%;
+  text-align: left;
+}
+.inner-gall-right .gall-extras .gall-words h3 {
+  color: #191919;
+  font-size: 150%;
+  margin: 0vw;
+  line-height: 110%;
+}
+.inner-gall-right .gall-extras .gall-words p {
+  color: #191919;
+  font-size: 100%;
+  margin: 0vw;
+}
+.inner-gall-right .gall-extras .gall-words :nth-child(2) {
+  margin-bottom: 0.5%;
+}
+.inner-gall-right .gall-extras .gall-words :last-child {
+  line-height: 93%;
+}
+
+/* OPENING ANIMATION */
+/* SECTION ZERO */
+#sec0 {
+  background-color: #191919;
+  transform: translate(0vw, 0vh) !important;
+}
+#sec0 .inner-img-BG {
+  transform: translate(0vw, 9vh);
+  align-items: flex-start;
+}
+#sec0 .inner-img-BG video {
+  border-bottom: 1.5vw solid #E67654;
+  border-top: 1.5vw solid #E67654;
+}
+#sec0 .inner-vid-BG {
+  transform: translate(0vw, 72vh);
+  position: absolute;
+  flex-direction: column;
+  gap: 0vw;
+}
+#sec0 .inner-vid-BG hr {
+  height: 0.6vh;
+  width: 100%;
+  border: none;
+  border-radius: 100%;
+  margin-bottom: 6vh;
+}
+#sec0 .inner-vid-BG .inner-vid-TTL {
+  font-family: "MilitechFill";
+  letter-spacing: 0.3vw;
+  font-size: 3.5vw;
+  margin: 0vw;
+  transform: translate(0vw, 2vh);
+}
+#sec0 .inner-vid-BG iframe {
+  width: 50vw;
+  height: 30vw;
+  border: 1vw double #E67654;
+}
+#sec0 .roster-BG {
+  transform: translate(0vw, 200vh);
+  width: 100vw;
+  height: 120vh;
+  padding: 3%;
+  position: absolute;
+}
+#sec0 .roster-BG .roster-col {
+  width: 33%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5%;
+}
+#sec0 .roster-BG .roster-col .roster-img {
+  width: 70%;
+  border: 0.7vw double #e0cc5e;
+  border-radius: 20%;
+  transition: border 200ms ease, border-radius 200ms ease;
+}
+#sec0 .roster-BG .roster-col .roster-img:hover {
+  border: 0.7vw double #E67654;
+  border-radius: 5%;
+}
+#sec0 .roster-BG .roster-col .roster-more {
+  color: white;
+  font-weight: bold;
+  font-size: 110%;
+  margin-top: -4%;
+  font-family: "Lato";
+  transition: transform 700ms ease, color 200ms ease;
+}
+#sec0 .roster-BG .roster-col .roster-more:hover {
+  transform: scale(1.3);
+  color: #e96e6e;
+  cursor: pointer;
+}
+#sec0 .roster-BG .roster-col .roster-title {
+  color: white;
+  font-size: 300%;
+  font-family: "MilitechStroke";
+  margin: 0vw;
+}
+#sec0 .roster-BG .roster-col .roster-text {
+  color: white;
+  width: 80%;
+  margin: 0vw;
+  font-size: 160%;
+}
+#sec0 .roster-BG .roster-col:nth-child(2) {
+  width: 34%;
+}
+#sec0 .action-BG {
+  transform: translate(0vw, 300vh) scale(90%);
+  width: 100vw;
+  height: 80vh;
+  padding: 3%;
+  position: absolute;
+  gap: 4%;
+}
+#sec0 .action-BG .action-text-col {
+  width: 75%;
+  height: 100%;
+  background-color: #e96e6e;
+  flex-direction: column;
+  padding: 3%;
+  border: 1vw solid #e96e6e;
+  border-radius: 10%;
+}
+#sec0 .action-BG .action-text-col .action-text-TTL {
+  width: 100%;
+  border: 1.5vw double #e0cc5e;
+  color: white;
+  font-weight: bold;
+  font-size: 700%;
+}
+#sec0 .action-BG .action-text-col h4 {
+  font-size: 260%;
+  margin: 5% 0 0 0;
+  color: #191919;
+}
+#sec0 .action-BG .action-text-col p {
+  font-size: 150%;
+  margin: 3% 0 0 0;
+  color: white;
+}
+#sec0 .action-BG .action-btn-col {
+  width: 25%;
+  height: 100%;
+}
+#sec0 .action-BG .action-btn-col .action-btn {
+  width: 15vw;
+  height: 15vw;
+  background-color: #191919;
+  border-radius: 100%;
+  border: 2vw solid #e0cc5e;
+  transition: background-color 200ms;
+}
+#sec0 .action-BG .action-btn-col .action-btn:hover {
+  background-color: #e96e6e;
+  cursor: pointer;
+}
+#sec0 .action-BG {
+  transform: translate(0vw, 300vh) scale(90%);
+  width: 100vw;
+  height: 80vh;
+  padding: 3%;
+  position: absolute;
+  gap: 4%;
+}
+#sec0 .action-BG .action-text-col {
+  width: 75%;
+  height: 100%;
+  background-color: #e96e6e;
+  flex-direction: column;
+  padding: 3%;
+  border: 1vw solid #e96e6e;
+  border-radius: 10%;
+}
+#sec0 .action-BG .action-text-col .action-text-TTL {
+  width: 100%;
+  border: 1.5vw double #e0cc5e;
+  color: white;
+  font-weight: bold;
+  font-size: 700%;
+}
+#sec0 .action-BG .action-text-col h4 {
+  font-size: 260%;
+  margin: 5% 0 0 0;
+  color: #191919;
+}
+#sec0 .action-BG .action-text-col p {
+  font-size: 150%;
+  margin: 3% 0 0 0;
+  color: white;
+}
+#sec0 .action-BG .action-btn-col {
+  width: 25%;
+  height: 100%;
+}
+#sec0 .action-BG .action-btn-col .action-btn {
+  width: 15vw;
+  height: 15vw;
+  background-color: #191919;
+  border-radius: 100%;
+  border: 2vw solid #e0cc5e;
+  transition: background-color 200ms;
+}
+#sec0 .action-BG .action-btn-col .action-btn:hover {
+  background-color: #e96e6e;
+  cursor: pointer;
+}
+#sec0 footer {
+  transform: translate(0vw, 440vh);
+  border-top: 2vh solid #E67654;
+  padding-bottom: 5vh;
+  height: 60vh;
+}
+#sec0 footer img {
+  height: 50vh;
+}
+
+/* SECTION ONE */
+#sec1 {
+  background-color: #f3ba64;
+}
+#sec1 .inner-img-BG .inner-img-TXT {
+  text-shadow: 0vw 0vh 2vw #191919;
+}
+#sec1 .inner-img-BG .inner-img-IMG {
+  width: 100vw;
+  height: 85vh;
+}
+#sec1 .inner-text-BG {
+  transform: translate(0vw, 100vh);
+  background-color: #191919;
+}
+#sec1 .inner-vid-BG iframe {
+  border-radius: 5%;
+  width: 55vw;
+  height: 65vh;
+  border: 1vw double #013C7E;
+}
+#sec1 .inner-gall-BG {
+  transform: translate(0vw, 300vh);
+}
+#sec1 .inner-gall-BG .inner-gall-box {
+  border: 0.5vw solid #f3ba64;
+}
+#sec1 .inner-gall-BG .inner-gall-box .inner-gall-left {
+  border-right: 0.5vw solid #f3ba64;
+}
+#sec1 .inner-gall-BG .inner-gall-box .inner-gall-left img {
+  border: 0.3vw solid #013C7E;
+}
+#sec1 .inner-gall-BG .inner-gall-box .inner-gall-left img:hover {
+  width: 80%;
+  border: 0.3vw solid #E67654;
+  border-radius: 2%;
+  cursor: pointer;
+}
+#sec1 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras {
+  border-bottom: 0.5vw solid #f3ba64;
+}
+#sec1 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras img {
+  border: 0.3vw solid #013C7E;
+}
+#sec1 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras img:hover {
+  border: 0.3vw solid #E67654;
+  border-radius: 2%;
+  cursor: pointer;
+}
+#sec1 .inner-gall-BG .inner-gall-box .inner-gall-right > div:last-child {
+  border-bottom: 0vw;
+}
+#sec1 footer {
+  transform: translate(0vw, 340vh);
+  border-top: 2vh solid #f3ba64;
+}
+#sec1 footer img {
+  height: 20vh;
+}
+
+#sec2 {
+  background-color: #76cb63;
+}
+#sec2 .inner-img-BG .inner-img-TXT {
+  text-shadow: 0vw 0vh 2vw #191919;
+}
+#sec2 .inner-img-BG .inner-img-IMG {
+  width: 100vw;
+  height: 85vh;
+}
+#sec2 .inner-text-BG {
+  transform: translate(0vw, 100vh);
+  background-color: #191919;
+}
+#sec2 .inner-vid-BG iframe {
+  border-radius: 5%;
+  width: 55vw;
+  height: 65vh;
+  border: 1vw double #F9CE9A;
+}
+#sec2 .inner-gall-BG {
+  transform: translate(0vw, 300vh);
+}
+#sec2 .inner-gall-BG .inner-gall-box {
+  border: 0.5vw solid #76cb63;
+}
+#sec2 .inner-gall-BG .inner-gall-box .inner-gall-left {
+  border-right: 0.5vw solid #76cb63;
+}
+#sec2 .inner-gall-BG .inner-gall-box .inner-gall-left img {
+  border: 0.3vw solid #F9CE9A;
+}
+#sec2 .inner-gall-BG .inner-gall-box .inner-gall-left img:hover {
+  width: 80%;
+  border: 0.3vw solid #8d593d;
+  border-radius: 2%;
+  cursor: pointer;
+}
+#sec2 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras {
+  border-bottom: 0.5vw solid #76cb63;
+}
+#sec2 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras img {
+  border: 0.3vw solid #F9CE9A;
+}
+#sec2 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras img:hover {
+  border: 0.3vw solid #8d593d;
+  border-radius: 2%;
+  cursor: pointer;
+}
+#sec2 .inner-gall-BG .inner-gall-box .inner-gall-right > div:last-child {
+  border-bottom: 0vw;
+}
+#sec2 footer {
+  transform: translate(0vw, 340vh);
+  border-top: 2vh solid #76cb63;
+}
+#sec2 footer img {
+  height: 20vh;
+}
+
+#sec3 {
+  background-color: #ee97a4;
+}
+#sec3 .inner-img-BG .inner-img-TXT {
+  text-shadow: 0vw 0vh 2vw #191919;
+}
+#sec3 .inner-img-BG .inner-img-IMG {
+  width: 100vw;
+  height: 85vh;
+}
+#sec3 .inner-text-BG {
+  transform: translate(0vw, 100vh);
+  background-color: #191919;
+}
+#sec3 .inner-vid-BG iframe {
+  border-radius: 5%;
+  width: 55vw;
+  height: 65vh;
+  border: 1vw double #07a2a2;
+}
+#sec3 .inner-gall-BG {
+  transform: translate(0vw, 300vh);
+}
+#sec3 .inner-gall-BG .inner-gall-box {
+  border: 0.5vw solid #ee97a4;
+}
+#sec3 .inner-gall-BG .inner-gall-box .inner-gall-left {
+  border-right: 0.5vw solid #ee97a4;
+}
+#sec3 .inner-gall-BG .inner-gall-box .inner-gall-left img {
+  border: 0.3vw solid #07a2a2;
+}
+#sec3 .inner-gall-BG .inner-gall-box .inner-gall-left img:hover {
+  width: 80%;
+  border: 0.3vw solid #c62026;
+  border-radius: 2%;
+  cursor: pointer;
+}
+#sec3 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras {
+  border-bottom: 0.5vw solid #ee97a4;
+}
+#sec3 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras img {
+  border: 0.3vw solid #07a2a2;
+}
+#sec3 .inner-gall-BG .inner-gall-box .inner-gall-right .gall-extras img:hover {
+  border: 0.3vw solid #c62026;
+  border-radius: 2%;
+  cursor: pointer;
+}
+#sec3 .inner-gall-BG .inner-gall-box .inner-gall-right > div:last-child {
+  border-bottom: 0vw;
+}
+#sec3 footer {
+  transform: translate(0vw, 340vh);
+  border-top: 2vh solid #ee97a4;
+}
+#sec3 footer img {
+  height: 20vh;
+}
+
+/* REFERENCES & ABOUT US */
+.extraBG {
+  z-index: 97;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(241, 242, 242);
+  text-align: left;
+  border: 1vh dashed rgb(12, 12, 107);
+  overflow-y: scroll;
+}
+
+.sourcesTXT {
+  position: absolute;
+  top: 0vh;
+  font-family: "MilitechFill", sans-serif;
+  color: rgb(83, 173, 197);
+  font-weight: 5 0;
+  font-size: 1.8vw;
+  line-height: 6vh;
+  padding: 5vw 12vw 5vw 12vw;
+}
+
+.sourcesTXT span {
+  color: rgb(203, 179, 43);
+  font-family: "UAVOSD";
+  font-size: 2vw;
+}/*# sourceMappingURL=style.css.map */
