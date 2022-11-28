@@ -73,7 +73,7 @@ img, video {
   font-family: "Raleway";
   src: url("MIL_Fonts/Raleway.ttf");
 }
-section, .roster-BG, .roster-col, .action-BG, .action-text-col, .action-btn-col, .inner-img-BG, .inner-text-BG, .inner-text-TXT, .inner-vid-BG, .inner-gall-BG, .inner-gall-box, .inner-gall-left, .inner-gall-right, .gall-words, .gall-articles, .inner-gall-left div, .inner-gall-right div, footer, .extraBG, #mainBG, .textBG, .textTXT {
+section, .roster-BG, .roster-col, .action-BG, .action-text-col, .action-btn-col, .inner-img-BG, .inner-text-BG, .inner-text-TXT, .inner-vid-BG, .inner-gall-BG, .inner-gall-box, .inner-gall-left, .inner-gall-right, .gall-words, .gall-articles, .inner-gall-left div, .inner-gall-right div, .spot-BG, .spot-col, .spot-row, footer, .extraBG, #mainBG, .textBG, .textTXT, .team-BG, .team-col, .team-table {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,9 +217,17 @@ footer {
 }
 .inner-vid-BG .inner-vid-TXT .inner-vid-TTL {
   font-family: "MilitechStroke";
+  margin: 0;
 }
 .inner-vid-BG .inner-vid-TXT p {
   font-family: "MilitechFill";
+}
+
+#sec1 .inner-vid-BG, #sec2 .inner-vid-BG, #sec3 .inner-vid-BG {
+  padding: 2%;
+}
+#sec1 .inner-vid-BG .inner-vid-TXT, #sec2 .inner-vid-BG .inner-vid-TXT, #sec3 .inner-vid-BG .inner-vid-TXT {
+  width: 50%;
 }
 
 .inner-text-TTL, .inner-vid-TTL {
@@ -468,56 +476,6 @@ hr {
   background-color: #e96e6e;
   cursor: pointer;
 }
-#sec0 .action-BG {
-  transform: translate(0vw, 300vh) scale(90%);
-  width: 100vw;
-  height: 80vh;
-  padding: 3%;
-  position: absolute;
-  gap: 4%;
-}
-#sec0 .action-BG .action-text-col {
-  width: 75%;
-  height: 100%;
-  background-color: #e96e6e;
-  flex-direction: column;
-  padding: 3%;
-  border: 1vw solid #e96e6e;
-  border-radius: 10%;
-}
-#sec0 .action-BG .action-text-col .action-text-TTL {
-  width: 100%;
-  border: 1.5vw double #e0cc5e;
-  color: white;
-  font-weight: bold;
-  font-size: 700%;
-}
-#sec0 .action-BG .action-text-col h4 {
-  font-size: 260%;
-  margin: 5% 0 0 0;
-  color: #191919;
-}
-#sec0 .action-BG .action-text-col p {
-  font-size: 150%;
-  margin: 3% 0 0 0;
-  color: white;
-}
-#sec0 .action-BG .action-btn-col {
-  width: 25%;
-  height: 100%;
-}
-#sec0 .action-BG .action-btn-col .action-btn {
-  width: 15vw;
-  height: 15vw;
-  background-color: #191919;
-  border-radius: 100%;
-  border: 2vw solid #e0cc5e;
-  transition: background-color 200ms;
-}
-#sec0 .action-BG .action-btn-col .action-btn:hover {
-  background-color: #e96e6e;
-  cursor: pointer;
-}
 #sec0 footer {
   transform: translate(0vw, 440vh);
   border-top: 2vh solid #E67654;
@@ -709,6 +667,126 @@ hr {
   height: 20vh;
 }
 
+#sec4 {
+  background-color: #f5ebdf;
+  transform: translate(0vw, 0vh);
+}
+#sec4 .inner-img-IMG {
+  width: 100vw;
+  height: 85vh;
+}
+#sec4 .inner-vid-BG {
+  transform: translate(0vw, 100vh);
+  position: absolute;
+  flex-direction: column;
+  gap: 0vw;
+}
+#sec4 .inner-vid-BG hr {
+  height: 0.6vh;
+  width: 100%;
+  border: none;
+  border-radius: 100%;
+  margin-bottom: 6vh;
+}
+#sec4 .inner-vid-BG .inner-vid-TTL {
+  font-family: "MilitechFill";
+  letter-spacing: 0.3vw;
+  font-size: 3.5vw;
+  margin: 0vw;
+  transform: translate(0vw, 2vh);
+  color: #191919;
+}
+#sec4 .inner-vid-BG iframe {
+  width: 50vw;
+  height: 30vw;
+  border: 1vw double #E67654;
+}
+#sec4 .roster-BG {
+  width: 100vw;
+  height: 120vh;
+  padding: 3%;
+  position: absolute;
+}
+#sec4 .roster-BG .roster-col {
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5%;
+}
+#sec4 .roster-BG .roster-col .roster-img {
+  width: 20vw;
+  max-height: 20vw;
+  border: 0.7vw double #e0cc5e;
+  border-radius: 20%;
+  transition: border 200ms ease, border-radius 200ms ease;
+}
+#sec4 .roster-BG .roster-col .roster-img:hover {
+  border: 0.7vw double #E67654;
+  border-radius: 5%;
+}
+#sec4 .roster-BG .roster-col .roster-more {
+  color: #013C7E;
+  font-weight: bold;
+  font-size: 110%;
+  margin-top: -2%;
+  font-family: "Lato";
+  transition: transform 500ms ease, color 200ms ease;
+}
+#sec4 .roster-BG .roster-col .roster-more:hover {
+  transform: scale(1.3);
+  color: #e96e6e;
+  cursor: pointer;
+}
+#sec4 .roster-BG .roster-col .roster-title {
+  color: white;
+  font-size: 300%;
+  font-family: "MilitechStroke";
+  margin: 0vw;
+}
+#sec4 .roster-BG .roster-col .roster-text {
+  color: #191919;
+  width: 80%;
+  margin: 0vw;
+  font-size: 160%;
+}
+#sec4 .spot-BG {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  padding: 5%;
+  gap: 3%;
+}
+#sec4 .spot-BG .spot-col {
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  gap: 10%;
+}
+#sec4 .spot-BG .spot-col .spot-row {
+  gap: 8%;
+}
+#sec4 .spot-BG .spot-col .spot-row img {
+  width: 36vw;
+  height: 8vw;
+  border: 0.8vw double #d5bf46;
+  border-radius: 20%;
+  transition: border 200ms ease, border-radius 300ms ease;
+}
+#sec4 .spot-BG .spot-col .spot-row img:hover {
+  border: 0.8vw double #E67654;
+  border-radius: 0%;
+}
+#sec4 .spot-BG .spot-col .spot-row p {
+  text-align: left;
+}
+#sec4 footer {
+  transform: translate(0vw, 550vh);
+  border-top: 2vh solid #013C7E;
+}
+#sec4 footer img {
+  height: 20vh;
+}
+
 /* REFERENCES & ABOUT US */
 .extraBG {
   z-index: 97;
@@ -725,15 +803,44 @@ hr {
   position: absolute;
   top: 0vh;
   font-family: "MilitechFill", sans-serif;
-  color: rgb(83, 173, 197);
-  font-weight: 5 0;
+  color: #53adc5;
+  font-weight: 500;
   font-size: 1.8vw;
   line-height: 6vh;
   padding: 5vw 12vw 5vw 12vw;
 }
 
 .sourcesTXT span {
-  color: rgb(203, 179, 43);
+  color: #cbb32b;
   font-family: "UAVOSD";
   font-size: 2vw;
+}
+
+.team-BG {
+  flex-direction: column;
+  width: 90vw;
+}
+.team-BG img {
+  width: 80vw;
+  border: 1vw double #53adc5;
+}
+.team-BG .team-table {
+  color: #191919;
+  align-items: flex-start;
+}
+.team-BG .team-table .team-col {
+  width: 20%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  color: #191919;
+  font-size: 55%;
+  padding: 1%;
+}
+.team-BG .team-table .team-name {
+  font-weight: bold;
+}
+.team-BG .team-table .team-text {
+  line-height: 130%;
 }/*# sourceMappingURL=style.css.map */
