@@ -759,10 +759,10 @@ hr {
   flex-direction: column;
   height: 100%;
   width: 50%;
-  gap: 10%;
+  gap: 7%;
 }
 #sec4 .spot-BG .spot-col .spot-row {
-  gap: 8%;
+  gap: 2%;
 }
 #sec4 .spot-BG .spot-col .spot-row img {
   width: 36vw;
@@ -774,9 +774,11 @@ hr {
 #sec4 .spot-BG .spot-col .spot-row img:hover {
   border: 0.8vw double #E67654;
   border-radius: 0%;
+  cursor: pointer;
 }
 #sec4 .spot-BG .spot-col .spot-row p {
   text-align: left;
+  font-size: 120%;
 }
 #sec4 footer {
   transform: translate(0vw, 550vh);
