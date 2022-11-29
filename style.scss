@@ -643,10 +643,10 @@ hr {height: 0.4vh; border-radius: 100%;}
       flex-direction: column;
       height: 100%;
       width: 50%;
-      gap: 10%;
+      gap: 7%;
       
       .spot-row {
-        gap: 8%;
+        gap: 2%;
 
         img {
           width: 36vw;
@@ -656,10 +656,10 @@ hr {height: 0.4vh; border-radius: 100%;}
           transition: border 200ms ease, border-radius 300ms ease;
         }
 
-        img:hover {border: 0.8vw double $red-orange; border-radius: 0%;}
+        img:hover {border: 0.8vw double $red-orange; border-radius: 0%; cursor: pointer;}
 
         p {
-          text-align: left;
+          text-align: left; font-size: 120%;
         }
       }
     }
